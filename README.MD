@@ -1,4 +1,4 @@
-# Social Media Web App:.Connection
+# Social Media Web App:     .Connection
 
 ## Table of Contents
 
