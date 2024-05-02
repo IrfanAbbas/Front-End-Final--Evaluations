@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/img/logo.png" type="image/x-icon">
+
+
+    <!-- icon-link  -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+</head>
+
+<body>
+    <nav class="d-flex justify-content-around nav-container">
+        <div class="col-3 top-nav">
+            <div class="logo-search my-auto">
+                <!-- <img src="./assets/img/icons8-renren-64.png" alt=""> -->
+                <h2><span>.</span><i>Connection</i></h2>
+
+            </div>
+        </div>
+        <div class="nav-item">
+            <div class="dropdown">
+                <!-- Dropdown Toggle Button -->
+                <button class="btn btn-secondary dropdown-toggle menubutton" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown" aria-expanded="false" onclick="bgClean()">
+                    <!-- User Profile Icon or Image -->
+                    <img src="./assets/img/menu-regular-24.png" class="rounded-circle " alt="User Profile" />
+                </button>
+                <ul class="dropdown-menu dropdown-menu-menu-button" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="notification.html">Notifications</a></li>
+                    <li><a class="dropdown-item" href="#">Messages</a></li>
+                    <li><a class="dropdown-item" onclick="lsclear()" href="#">Logout</a></li>
+                </ul>
+            </div>
+            <a href=""><img src="./assets/img/home.PNG" class="top-nav-icon"></a>
+            <a href=""><img src="./assets/img/add.PNG" class="top-nav-icon"></a>
+            <a href="explore.html"><img src="./assets/img/explore.PNG" class="top-nav-icon"></a>
+            <a href=""><img src="./assets/img/comment.PNG" class="top-nav-icon"></a>
+            <!-- <a href=""><img src="./assets/img/comment.PNG" alt=""></a> -->
+            <ion-icon name="people-outline" class="group-icon"></ion-icon>
+            <img src="./assets/img/mr.jpg" class="user-profile-mid-nav-container user-profile-img rounded-circle"
+                data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer; width: 50px; height: 50px;" />
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li>
+                    <button class="dropdown-item profile-logout" onclick="lsclear()">Logout</button>
+                </li>
+            </ul>
+        </div>
+        <div class="col-3 top-right-nav">
+
+            <!-- Dropdown menu start here  -->
+            <div class="user-profile">
+                <a href="notification.html"><ion-icon name="notifications-outline"
+                        class="notification-icon"></ion-icon></a>
+                <img src="./assets/img/icons8-circle-20.png" alt="" style="height: 10px;width: 10px;">
+                <div class="dropdown"></div>
+                <button class="btn btn-secondary  dropdownbtn " type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown" aria-expanded="false" onclick="bgClean()">
+                    <img src="./assets/img/mr.jpg" class="rounded-circle user-profile-img" alt="User Profile" />
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+
+                    <div class="d-flex  dropdown-container">
+                        <!-- <li><a class="dropdown-item" href="#"><ion-icon
+                                    name="settings-outline"></ion-icon><i>Setting</i></a></li>
+                        <ion-icon name="chevron-forward-outline" class="dropdown-icon"></ion-icon> -->
+                        <img src="./assets/img/cat.jpg" alt="image" class="user-profile-img 
+                        drop-down-user-profile">
+                        <li class="profile-li"><i>Profile</i> </li>
+                        <ion-icon name="chevron-forward-outline" class="dropdown-icon"></ion-icon>
+                    </div>
+
+                    <div class="d-flex  dropdown-container">
+                        <li><a class="dropdown-item" href=""><ion-icon name="person-outline"></ion-icon>
+                                <i>Group</i></a></li>
+                        <ion-icon name="chevron-forward-outline" class="dropdown-icon"></ion-icon>
+                    </div>
+
+                    <div class="d-flex  dropdown-container">
+                        <li><a class="dropdown-item" href="#"><ion-icon
+                                    name="chatbubbles-outline"></ion-icon><i>Massage</i></a></li>
+                        <ion-icon name="chevron-forward-outline" class="dropdown-icon"></ion-icon>
+                    </div>
+
+                    <div class="d-flex  dropdown-container">
+                        <li><a class="dropdown-item" onclick="lsclear()" href="#"><ion-icon
+                                    name="log-out-outline"></ion-icon> <i>Logout</i></a></li>
+                        <ion-icon name="chevron-forward-outline" class="dropdown-icon"></ion-icon>
+                    </div>
+
+                </ul>
+                <div>
+                </div>
+            </div>
+    </nav>
+    <div class="container-fluid border ">
+        <div class="row">
+            <div class="col-3 bg-white left-container-user-group">
+                <div class="left-container">
+                    <input type="search" class="search-group" name="search" id="search" placeholder="Sarch here">
+                    <button class="btn btn-primary mt-2 group-search">Search</button>
+                    <h4 class="mt-3 haiding-group-container"><i>Your Group</i></h4>
+                    <div class="group-list ">
+                        <img src="./assets/img/Redheart.png" alt="icon" style="height: 50px; width: 50px;">
+                        <p><i>Blood community</i></p>
+                        <img src="./assets/img/greentick.png" class="addgroup-icon">
+
+                    </div>
+                    <div class="group-list ">
+                        <img src="./assets/img/dev.png" alt="icon" style="height: 50px; width: 50px;">
+                        <p>Dev community</p>
+                        <img src="./assets/img/greentick.png" class="addgroup-icon">
+                    </div>
+                    <h4 class="mt-3 haiding-group-container"><i>Suggesstion</i></h4>
+                    <div class="group-list">
+                        <img src="./assets/img/newsfeed.jpg" alt="icon" style="height: 50px; width: 50px;">
+                        <p>News Feed</p>
+                        <img src="./assets/img/add-group.png" class="addgroup-icon">
+                    </div>
+                    <div class="group-list">
+                        <img src="./assets/img/images.jpeg" alt="icon" style="height: 50px; width: 50px;">
+                        <p>Study Abroad</p>
+                        <img src="./assets/img/add-group.png" class="addgroup-icon">
+                    </div>
+                    <div class="frinds-list">
+                        <div>
+                            <h3><i>Your Friends</i></h3>
+                        </div>
+                        <div class="div.list-item-main">
+                            <div class="frinds-list-item">
+                                <img src="./assets/img/fahim.jpg" alt="">
+                                <div class="Frinds-name">
+                                    <h6>Miller</h6>
+                                    <p><img src="./assets/img/icons8-circle-20.png" alt=""
+                                            style="height: 15px; width: 15px; margin-right: 20px;"></p>
+                                </div>
+                            </div>
+                            <div class="frinds-list-item">
+                                <img src="./assets/img/dristy.jpg" alt="">
+                                <div class="Frinds-name">
+                                    <h6>Carla Thomos</h6>
+                                    <p><img src="./assets/img/orange-crile.png" alt=""
+                                            style="height: 15px; width: 15px;margin-right: 20px;"></p>
+                                </div>
+                            </div>
+                            <div class="frinds-list-item">
+                                <img src="./assets/img/ijaj.jpg" alt="">
+                                <div class="Frinds-name">
+                                    <h6>David Jose</h6>
+                                    <p><img src="./assets/img/icons8-circle-20.png" alt=""
+                                            style="height: 15px; width: 15px;margin-right: 20px;"></p>
+                                </div>
+                            </div>
+                            <div class="frinds-list-item">
+                                <img src="./assets/img/kaiful.jpg" alt="">
+                                <div class="Frinds-name">
+                                    <h6>Emily bloom</h6>
+                                    <p><img src="./assets/img/orange-crile.png" alt=""
+                                            style="height: 15px; width: 15px;margin-right: 20px;"></p>
+                                </div>
+                            </div>
+                            <div class="frinds-list-item">
+                                <img src="./assets/img/lamha2.jpg" alt="">
+                                <div class="Frinds-name">
+                                    <h6>Sementha Jacson</h6>
+                                    <p><img src="./assets/img/icons8-circle-20.png" alt=""
+                                            style="height: 15px; width: 15px;margin-right: 20px;"></p>
+                                </div>
+                            </div>
+                            <div class="frinds-list-item">
+                                <img src="./assets/img/mahirkawai.jpg" alt="">
+                                <div class="Frinds-name">
+                                    <h6>Poual Mash</h6>
+                                    <p><img src="./assets/img/orange-crile.png" alt=""
+                                            style="height: 15px; width: 15px;margin-right: 20px;"></p>
+                                </div>
+                            </div>
+
+
+                            <!-- sugesstion section start here  -->
+
+                            <h4 class="mt-3 haiding-group-container"><i>Sugesstion</i></h4>
+                            <div class="group-list ">
+                                <img src="./assets/img/martaj.jpg" alt="icon" style="height: 50px; width: 50px;">
+                                <p>Martag_ vino</p>
+                                <img src="./assets/img/useradd.jpg" class="addgroup-icon">
+                            </div>
+                            <div class="group-list ">
+                                <img src="./assets/img/mishkat leura.jpg" alt="icon" style="height: 50px; width: 50px;">
+                                <p>Ava-rooz</p>
+                                <img src="./assets/img/useradd.jpg" class="addgroup-icon">
+                            </div>
+                            <div class="group-list ">
+                                <img src="./assets/img/mishkat.jpg" alt="icon" style="height: 50px; width: 50px;">
+                                <p>Meera_aa</p>
+                                <img src="./assets/img/useradd.jpg" class="addgroup-icon">
+                            </div>
+                            <div class="group-list ">
+                                <img src="./assets/img/nadimvai.jpg" alt="icon" style="height: 50px; width: 50px;">
+                                <p>Shaine_Jhon</p>
+                                <img src="./assets/img/greentick.png" class="addgroup-icon">
+                            </div>
+                            <div class="group-list ">
+                                <img src="./assets/img/nafir.jpg" alt="icon" style="height: 50px; width: 50px;">
+                                <p>Ray willson</p>
+                                <img src="./assets/img/useradd.jpg" class="addgroup-icon">
+                            </div>
+                            <div class="group-list ">
+                                <img src="./assets/img/pial.jpg" alt="icon" style="height: 50px; width: 50px;">
+                                <p>Adem-Wiliam</p>
+                                <img src="./assets/img/useradd.jpg" class="addgroup-icon">
+                            </div>
+                            <div class="group-list ">
+                                <img src="./assets/img/oh achha.jpg" alt="icon" style="height: 50px; width: 50px;">
+                                <p>Janny_Bolom</p>
+                                <img src="./assets/img/greentick.png" class="addgroup-icon">
+                            </div>
+                            <div class="group-list ">
+                                <img src="./assets/img/payel.jpg" alt="icon" style="height: 50px; width: 50px;">
+                                <p>Shy-Phlip</p>
+                                <img src="./assets/img/useradd.jpg" class="addgroup-icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-6 bg-white mid-container">
+                <div class="story-section">
+                    <div class="story"><img src="./assets/img/pulp.jpg" alt="">
+                        <p>Polly_mo</p>
+                    </div>
+                    <div class="story"><img src="./assets/img/rimi.jpg" alt="">
+                        <p>rimi_tari</p>
+                    </div>
+                    <div class="story"><img src="./assets/img/rollings.of.ovi.jpg" alt="">
+                        <p>off_ovi</p>
+                    </div>
+                    <div class="story"><img src="./assets/img/Screenshot_1.png" alt="">
+                        <p>thof_nee</p>
+                    </div>
+                    <div class="story"><img src="./assets/img/Screenshot_2.png" alt="">
+                        <p>Dude</p>
+                    </div>
+                    <div class="story"><img src="./assets/img/Screenshot_3.png" alt="">
+                        <p>ava-tari</p>
+                    </div>
+                    <div class="story"><img src="./assets/img/m1.webp" alt="">
+                        <p>Um-h</p>
+                    </div>
+                    <div class="story"><img src="./assets/img/m2.jpg" alt="">
+                        <p>mehreen</p>
+                    </div>
+                    <div class="story"><img src="./assets/img/m3.jpeg" alt="">
+                        <p>no-oor</p>
+                    </div>
+                    <div class="story"><img src="./assets/img/m4.avif" alt="">
+                        <p>ha-wa</p>
+                    </div>
+                </div>
+                <div class="search-post-content mt-3 d-flex">
+                    <img src="./assets/img/cat.jpg" alt="image" class="user-profile-img">
+                    <input type=" search" name="search" class="search-post  " id="searchInputPost"
+                        placeholder="Sreach post here">
+                    <button class="search-button ml-10 btn btn-primary" id="searcPosthButton">Search</button>
+                </div>
+                <div class="post-section mt-3 mb-3" id="postsContainer">
+                    <!-- for show post  -->
+
+                    <div class="postPublished"> </div>
+
+                    <!-- the all post and users profile display on this div -->
+                    <div id="results"></div>
+
+                </div>
+            </div>
+            <div class="col-3 right-container-user">
+                <div class="right-col">
+                    <h3> <i>Massage</i></h3>
+                    <input type="search" class="random-user-search" id="searchInput" placeholder="Search user here">
+                    <button class="btn btn-primary mt-2" id="searchButton">Search</button>
+                    <div class="massage-request">
+                        <P> Primery</P>
+                        <P>Genreal</P>
+                        <P class="request">Request(14)</P>
+                    </div>
+                    <div id="usersContainer">
+
+                        <!-- for show user  -->
+                        <div id="usersContainer"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- getuser  -->
+    <script src="./assets/js/getuser.js"></script>
+
+    <!-- user profile  -->
+    <script src="./assets/js/profile.js"></script>
+
+    <script src="./assets/js/midleware.js"></script>
+
+    <!-- user comments  -->
+    <script src="./assets/js/comment.js"></script>
+    <!-- bootstrap cdn  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

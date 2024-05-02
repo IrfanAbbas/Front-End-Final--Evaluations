@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login|sign up</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="icon" href="./assets/img/icons8-login-48.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <span class="bg-animate"></span>
+        <div class="form-box Login">
+            <h2>login</h2>
+            <form action="#" id="login-form">
+                <div class="input-box">
+                    <input type="text" name="" id="email" required maxlength="20" >
+                    <label class="lb-user" id="usernameLabel">Username</label>
+                    <box-icon type='solid' name='user' class="icon"></box-icon>
+                </div>
+                <div class="input-box" id="input-label">
+                    <input type="password" name="" required id="password" maxlength="16">
+                    <label class="lb">Password</label>
+                    <box-icon name='lock-open-alt' class="icon" style="color: #fff;"></box-icon>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="logreg-link">
+                    <!-- <p>Don't have an account?<a href="register.html">Sign up</a> </p> -->
+                </div>
+            </form>
+        </div>
+        <div class="info-text login">
+            <h2 class="welcomback">Welcome Back!</h2>
+            <p class="welcomback">Please Login First</p>
+        </div>
+    </div>
+    <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/midleware.js"></script>
+
+</body>
+
+</html>
