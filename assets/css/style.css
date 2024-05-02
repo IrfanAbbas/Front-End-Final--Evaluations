@@ -337,10 +337,10 @@
 }
  /* post section start here  */
 .post-user-profile {
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 10px;
   margin: 10px 0;
-  box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.1); /* Light white shadow */
+  box-shadow: 5px 5px 5px 5px rgba(255, 255, 255, 0.5); /* Light white shadow */
 }
 
 .post-upper-profile {
