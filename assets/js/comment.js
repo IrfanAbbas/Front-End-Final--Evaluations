@@ -1,3 +1,5 @@
+// Fatch and display post here 
+
 async function fetchAndDisplayPosts() {
   try {
     // Fetch posts data
@@ -19,8 +21,7 @@ async function fetchAndDisplayPosts() {
         throw new Error("Failed to fetch user data");
       }
 
-      const userData = await userResponse.json(); // Convert user data to JSON
-
+      const userData = await userResponse.json(); 
       // Fetch comments for the current post
       const commentsResponse = await fetch(
         `https://dummyjson.com/posts/${post.id}/comments`
@@ -52,7 +53,7 @@ async function fetchAndDisplayPosts() {
                 <div class="card">
                     <div class="card-body">
                         <img src="${
-                          post.image || "./assets/img/wall.jpg"
+                          post.image || "./assets/img/1png.jpg"
                         }" alt="Post Image" width="100%">
                         <br><br><h5 class="card-title">${post.title}</h5>
                         <p class="card-text">${post.body}</p>
@@ -213,3 +214,6 @@ window.addEventListener("scroll", () => {
     fetchAndDisplayPosts(); // Call the function
   }
 });
+
+
+// comment js end here 

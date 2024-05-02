@@ -1,3 +1,5 @@
+// fatch user data from api here 
+
 async function fetchAndDisplayUsers() {
   try {
     const response = await fetch("https://dummyjson.com/users");
@@ -99,3 +101,6 @@ async function handleSearch() {
 
 // Add an event listener to the search button
 document.getElementById("searchButton").addEventListener("click", handleSearch);
+
+
+// get user and search user from api end here 

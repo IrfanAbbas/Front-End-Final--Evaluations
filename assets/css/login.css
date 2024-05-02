@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* by :default set  */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+/* body start here  */
 body {
   display: flex;
   justify-content: center;
@@ -12,6 +15,7 @@ body {
   min-height: 100vh;
   background: #081b29;
 }
+/* main class */
 .wrapper {
   position: relative;
   width: 750px;
@@ -21,21 +25,23 @@ body {
   overflow: hidden;
   box-shadow: 0 0 25px #0ef;
 }
+/* form start here  */
 .wrapper .form-box {
   position: absolute;
   top: 0;
   height: 100%;
   width: 50%;
-  /* background: red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 20px;
 }
+/* login start here  */
 .wrapper .form-box.login {
   left: 0;
   padding: 0 60px 0 40px;
 }
+/* h2 login here  */
 .form-box h2 {
   font-size: 32px;
   color: #fff;
@@ -47,9 +53,9 @@ body {
   height: 50px;
   margin: 25px 0;
 }
+/* input start here  */
 .input-box input {
   width: 100%;
-  /* width: calc(100% - 30px); */
   height: 100%;
   background: transparent;
   box-decoration-break: none;
@@ -65,6 +71,7 @@ body {
   padding-right: 20px;
   color: #fff;
 }
+/* for lable  */
 .input-box .lb {
   position: absolute;
   top: 50%;
@@ -96,6 +103,7 @@ body {
   color: #0ef;
 }
 
+/* icon start here  */
 .icon {
   position: absolute;
   right: 10px;
@@ -182,6 +190,8 @@ body {
   transform-origin: bottom right;
   border: 3px solid #0ef;
 }
+
+/* media query start here here  */
 
 @media screen and (min-width: 200px) and (max-width: 768px) {
   .bg-animate {

@@ -1,3 +1,5 @@
+// For user authentication 
+
 document.addEventListener("DOMContentLoaded", function () {
   let jwtToken = localStorage.getItem("jwtToken");
   console.log(jwtToken);
@@ -49,17 +51,23 @@ function updateUserProfileImages(newSrc) {
   });
 }
 
+// when click on the dropdown menu the bg color clean
 function bgClean() {
   document.getElementById("dropdownMenuButton").style.background = "none";
 }
 
+// empty hearts on blow of the post when click on it the bg color red 
 function heartBg() {
   // Changing the icon color to red
   document.getElementById("heart").style.color = "red";
 }
 
+// logout function define here 
 function lsclear() {
   localStorage.clear();
   alert("are you sure to logout");
   window.location.href = "login.html";
 }
+
+
+// Midleware end here 

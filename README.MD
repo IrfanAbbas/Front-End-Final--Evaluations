@@ -1,15 +1,32 @@
 # Social Media Web App:.Connection
 
+## Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [Project Goals](#project-goals)
+3. [Major Tasks](#major-tasks)
+   - [User Authentication](#user-authentication)
+   - [Post Management](#post-management)
+   - [Comment Management](#comment-management)
+4. [API Scope](#api-scope)
+5. [App Functionality](#app-functionality)
+6. [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation and Setup](#installation-and-setup)
+7. [Error Handling and Debugging](#error-handling-and-debugging)
+8. [Contributing](#contributing)
+9. [Conclusion](#conclusion)
+
 ## Project Overview
 
 This project creates a basic social media web application that allows users to log in, view posts, interact with posts, and browse comments. The app uses a Mock API (dummyjson.com) to simulate real-world data retrieval and user authentication.
 
 ## Features
-   
+
 1. **User Authentication**
 
    - Secure login functionality.
-   -Authentication using token.
+     -Authentication using token.
    - User data storage with a token in localStorage for session persistence.
    - Logout capability.
 

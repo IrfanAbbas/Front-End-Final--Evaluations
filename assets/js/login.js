@@ -1,5 +1,3 @@
-
-
 document
   .getElementById("login-form")
   .addEventListener("submit", async function (e) {
@@ -46,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   emailInput.addEventListener("input", function (event) {
     const email = emailInput.value.trim();
     const emailError = document.getElementById("email-error");
-
+    // username include only letters, numbers, and underscores
     if (/^[a-zA-Z0-9_-]+$/.test(email)) {
       emailInput.classList.add("is-invalid");
       emailError.textContent = "Please enter a valid UserN address.";
@@ -59,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
   passwordInput.addEventListener("input", function (event) {
     const password = passwordInput.value.trim();
     const passwordError = document.getElementById("password-error");
-
+//password include only letters, numbers, and underscores and must be at max 12 characters long
     if (
-      !/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
+      !/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,}$/.test(
         password
       )
     ) {
@@ -74,3 +72,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Login. js end here 

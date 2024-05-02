@@ -1,5 +1,7 @@
+// fatch post here 
+
 async function fetchDisplayPosts() {
-  const searchTerm = document.getElementById("searchInputPost").value.trim(); // Avoid redundant DOM queries and trim whitespace
+  const searchTerm = document.getElementById("searchInputPost").value.trim(); //remove spaces
   console.log(searchTerm, "ddddd");
   try {
     if (searchTerm) {
@@ -104,8 +106,7 @@ async function fetchDisplayPosts() {
                                   .join("")} </p>
                                 </div>
                                 <div>
-                                <img src="./assets/img/wall.jpg" alt="User Profile" class="rounded-circle" width="50" height="50">
-                                <p id="show-comments${post.id}"> </p>
+                                <p id="show-comments${post.id}" class="showcoment"> </p>
                                </div>
                                 
                                
@@ -229,6 +230,8 @@ async function searchPosts(query) {
     return data; // Return the parsed JSON data
   } catch (error) {
     console.error("Error searching posts:", error);
-    return null; // Return null on error
+    return null; 
   }
 }
+
+// Search post content end 
