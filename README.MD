@@ -1,4 +1,9 @@
 # Social Media Web App:     .Connection
+FOr live demo 
+https://front-end-final-evaluations.vercel.app/
+
+user name: kminchelle
+password: 0lelplR
 
 ## Table of Contents
 
